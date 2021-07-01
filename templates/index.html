@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='style1.css')}}">
+    </head>
+    <body>
+        <div class="home">
+            <h1>Welcome to Salary Predicter! </h1><br>
+            <form action="/predict" method="POST">
+                <input type = 'text' name="experience" placeholder="Experience in Years" required="required">
+                <input type = 'text' name="CGPA" placeholder="CGPA x 1.5" required="required">
+                <input type = 'text' name="Interview Score" placeholder="Interview Score (0-10)" required="required"><br><br>
+                <button type = 'submit'>Submit</button>
+                <h1>{{prediction}}</h1>
+            </form>
+            
+        </div>
+    </body>
+</html>
